@@ -9,18 +9,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     overflow:${(props) => `${props.overflow}`};
   }
-  /* 픽커 메인색 */
-  & .MuiPickersToolbar-toolbar{
-    background:${(props) => props.theme.main}!important;
-  }
-  /* 픽커 선택색 */
-  & .MuiPickersDay-daySelected{
-    background:${(props) => props.theme.main}!important;
-  }
-  /* 픽커 선택 년도색 */
-  & .MuiPickersYear-yearSelected{
-    color:${(props) => props.theme.main}!important;
-  }
 `;
 
 let token = localStorage.getItem("token");

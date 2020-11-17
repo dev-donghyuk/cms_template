@@ -16,10 +16,10 @@ let api = axios.create({
 
 // ===========post
 
-export const playjokerApi = {
+export const apiObject = {
   // login
   loginApi: (email, user_pass, pushtoken) =>
-    api.post("/playjokerforweb/PLAYJOKERAPI_GET_TOKEN2", {
+    api.post("/", {
       email: email,
       user_pass: user_pass,
       pushtoken: pushtoken,
