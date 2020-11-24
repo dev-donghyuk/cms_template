@@ -12,10 +12,6 @@ import "react-app-polyfill/stable";
 import "./css/reset.css";
 import "./css/global.css";
 
-// slick
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

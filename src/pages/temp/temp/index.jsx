@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Grid } from "@material-ui/core";
 import Wrapper from "./styles";
@@ -10,8 +10,6 @@ import Table from "../../../components/table";
 import TableFooter from "../../../components/table-footer";
 import ReactExport from "react-data-export";
 import { useDispatch, useSelector } from "react-redux";
-
-const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 const tempTabs = [
   { key: 0, value: "번호순" },
@@ -50,6 +48,9 @@ const TempComponent = () => {
     },
   ];
 
+  // Page
+  const [currentPageTitle, setCurrentPageTitle] = useState("");
+
   // Tabs
   const [tabValue, setTabValue] = useState(tempTabs[0].value);
   // Pagination
@@ -65,12 +66,31 @@ const TempComponent = () => {
   const searchTextChange = (e) => {
     setSearchText(e.target.value);
   };
-  console.log(history);
+
+  useEffect(() => {
+    console.log(tabValue);
+  }, [tabValue]);
+
+  useEffect(() => {
+    console.log(currentPage);
+  }, [currentPage]);
+
+  useEffect(() => {
+    console.log(searchText);
+  }, [searchText]);
+
+  useEffect(() => {
+    let tempCurrentPageData = history.location.pathname.split("/");
+    let tempCurrentPageTitle = tempCurrentPageData[
+      tempCurrentPageData.length - 1
+    ].substring(4, 5);
+    setCurrentPageTitle(`페이지${tempCurrentPageTitle}`);
+  }, [history.location]);
   return (
     <Wrapper>
       <Grid className="">
         {/* 테이블 상단 */}
-        <PageTitle title="페이지1">
+        <PageTitle title={currentPageTitle}>
           <Grid item className="tabs">
             <Tabs data={tempTabs} setTabValue={setTabValue}></Tabs>
           </Grid>

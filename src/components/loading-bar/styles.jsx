@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  & .ProgressBar {
+  & .progress_bar {
     position: fixed;
     left: 0;
     top: 0;

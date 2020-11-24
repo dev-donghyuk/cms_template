@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   & > div {
@@ -15,10 +15,6 @@ const Wrapper = styled.div`
       color: #fff;
       border: 1px solid ${(props) => props.theme.main};
       background: ${(props) => props.theme.main};
-      &.add {
-        margin-left: 0;
-        margin-right: auto;
-      }
     }
   }
 `;

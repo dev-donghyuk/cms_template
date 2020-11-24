@@ -1,8 +1,16 @@
-// 숫자 컴마
+import dayjs from "dayjs";
 
+// dayjs 날짜 포맷 YYYY-MM-DD
+export const DayJsDateFunction = (timestamp) => {
+  return dayjs(timestamp * 1000).format("YYYY-MM-DD");
+};
+
+// 숫자 컴마
 export const AddCommaFunction = (num) => {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
+
+// 패스워드 암호화
 
 export const SHA256 = (s) => {
   var chrsz = 8;
@@ -219,6 +227,8 @@ export const SHA256 = (s) => {
   s = Utf8Encode(s);
   return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
 };
+
+// 다음주소 라이브러리
 
 export function Postcode() {
   new window.daum.Postcode({

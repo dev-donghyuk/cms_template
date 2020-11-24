@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Wrapper from './styles';
-import { Grid } from '@material-ui/core';
-import { Pagination } from '@material-ui/lab';
+import Wrapper from "./styles";
+import { Grid } from "@material-ui/core";
+import { Pagination } from "@material-ui/lab";
 
 const TableFooter = (props) => {
   const {
@@ -21,7 +21,7 @@ const TableFooter = (props) => {
         {pagination && (
           <Grid className="table_pagination">
             <Pagination
-              count={Math.ceil(tableLength / 10)}
+              count={Math.ceil(tableLength / 10) + 2}
               onChange={currentPageChange}
             />
           </Grid>

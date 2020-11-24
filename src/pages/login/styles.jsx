@@ -42,6 +42,13 @@ const Wrapper = styled.div`
             opacity: 0.5;
           }
         }
+        & .errors_msg {
+          padding-top: 10px;
+          color: #ec5990;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: left;
+        }
       }
       & .btn_login {
         margin-top: 40px;

@@ -51,18 +51,6 @@ const Wrapper = styled.div`
         padding-left: 28px;
       }
     }
-    & .content {
-      position: absolute;
-      left: 0;
-      top: 0;
-      & .btn_delete {
-        padding: 10px 36px;
-        color: #fff;
-        font-weight: 500;
-        border-radius: 4px;
-        background: ${(props) => props.theme.main};
-      }
-    }
   }
 `;
 

@@ -16,10 +16,12 @@ const Table = (props) => {
           onRowClick={onRowClick}
           options={{
             selection: selection,
-            filtering: false,
-            sorting: false,
             pageSize: pageSize,
             paging: paging,
+            filtering: false,
+            sorting: false,
+            toolbar: false,
+            draggable: false,
           }}
           localization={{
             body: {

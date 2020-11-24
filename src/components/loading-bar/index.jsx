@@ -7,7 +7,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 const LoadingBar = () => {
   return (
     <Wrapper>
-      <LinearProgress className="ProgressBar" />
+      <LinearProgress className="progress_bar" />
     </Wrapper>
   );
 };

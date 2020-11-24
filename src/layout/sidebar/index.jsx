@@ -13,37 +13,58 @@ const data = [
   {
     key: "/temp1",
     value: "B",
-    depth2: [{ key: "/temp1/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp1/page1", value: "페이지1" },
+      { key: "/temp1/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp2",
     value: "C",
-    depth2: [{ key: "/temp2/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp2/page1", value: "페이지1" },
+      { key: "/temp2/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp3",
     value: "D",
-    depth2: [{ key: "/temp3/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp3/page1", value: "페이지1" },
+      { key: "/temp3/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp4",
     value: "E",
-    depth2: [{ key: "/temp4/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp4/page1", value: "페이지1" },
+      { key: "/temp4/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp5",
     value: "F",
-    depth2: [{ key: "/temp5/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp5/page1", value: "페이지1" },
+      { key: "/temp5/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp6",
     value: "G",
-    depth2: [{ key: "/temp6/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp6/page1", value: "페이지1" },
+      { key: "/temp6/page2", value: "페이지2" },
+    ],
   },
   {
     key: "/temp7",
     value: "H",
-    depth2: [{ key: "/temp7/page", value: "페이지1" }],
+    depth2: [
+      { key: "/temp7/page1", value: "페이지1" },
+      { key: "/temp7/page2", value: "페이지2" },
+    ],
   },
 ];
 
@@ -51,23 +72,21 @@ const Depth2Component = (props) => {
   const { menu } = props;
   return (
     <ul className="depth2">
-      {menu &&
-        menu.depth2 &&
-        menu.depth2.map((x, index) => {
-          return (
-            <li key={index} className="">
-              <NavLink
-                to={x.key}
-                activeClassName="on"
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                }}
-              >
-                {x.value}
-              </NavLink>
-            </li>
-          );
-        })}
+      {menu?.depth2.map((x, index) => {
+        return (
+          <li key={index} className="">
+            <NavLink
+              to={x.key}
+              activeClassName="on"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              {x.value}
+            </NavLink>
+          </li>
+        );
+      })}
     </ul>
   );
 };
